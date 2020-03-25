@@ -1,24 +1,47 @@
 <!DOCTYPE html>
-<html lang="jd">
+<html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>3と3の倍数で...</title>
+  <link rel="stylesheet" href="./css/styles.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161852407-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161852407-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'UA-161852407-1');
+    gtag('config', 'UA-161852407-1');
 </script>
 
 </head>
 <body>
-  <h2>マスクマップは終了致しました m(_ _)m </h2>
-  <p>お時間があれば、<a href="new_version/index.html">コチラ</a>で遊んでいってください。</p>
-
+  <div id="container">
+    <div id="info">
+      <span id="time">Time: 00</span>
+      <span id="score">Score: 0000</span>
+      <span id="miss">Miss: 00</span>
+    </div>
+    <div id="grid">
+      <div id="view">Start!!</div>
+    </div>
+    <div id="button" class="start">Start</div>
+    <div class="navi">
+      お知らせ &amp; 遊び方
+      <ul>
+        <li>フリー写真素材「ぱくたそ」さんの写真を利用させていただいています</li>
+        <li>Startボタンでスタート！</li>
+        <li>3の倍数のパネルを探してクリック</li>
+        <li>正解の場合、パネルが固定される。</li>
+        <li>不正解は減点！</li>
+        <li>Clearボタンを押すと固定されたパネルがクリアされ、パネルの数字分の点数が加算される</li>
+        <li>全クリア or 60秒経過 or 12回お手つきで終了</li>
+        <li>全クリアし時は残り時間×30点ボーナス！</li>
+      </ul>
+    </div>
+  </div>
+<script src="js/main.js"></script>
 </body>
 </html>
