@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+body {
+  background: #f99;
+  color:#ffa;
+  font-weight: bold;
+  text-align: center;
+  user-select: none;
+}
+#container {
+  width: 420px;
+  margin: 0 auto;
+}
+#grid {
+  width: 420px;
+  height: 420px;
+  border: 6px solid #ff9;
+  border-radius: 3%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-size: 420px 420px;
+  background-position: center;
+}
+#info {
+  margin: 3% 0;
+}
+#info > span {
+  width: 135px;
+  font-size: 21px;
+  display: inline-block;
+}
+#view {
+  width: 99%;
+  z-index: 3;
+  position: absolute;
+  top: 48%;
+  left:0;
+  font-size:60px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 0;
+  color: #ff9;
+  display: none;
+}
+
+.navi {
+  margin-top: 15px;
+  width: 420px;
+  height: 99px;
+  background: #fff;
+  color: #33c;
+  text-align: left;
+  overflow-y: scroll;
+  user-select: none;
+}
+.box {
+  width:105px;
+  height: 105px;
+  border: dashed 1px #f99;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 36px;
+  font-family: garuda;
+  font-weight: bold;
+  text-align: center;
+  line-height: 99px;
+  user-select: none;
+}
+
+#button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height:0;
+  width: 24%;
+  height: 48px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  line-height: 42px;
+  border-radius: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+
+#button.start {
+  background: #fc3;
+  box-shadow: 0 3px #963;
+}
+
+#button.clear {
+  background: #6f6;
+  box-shadow: 0 3px #390;
+}
+
+#button.replay {
+  background:#99f;
+  box-shadow: 0 3px #369;
+}
+
+#button.push {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  box-shadow: 0px 0px #333;
+  opacity: 0.6;
+  }
+
+@media (max-width: 1026px) {
+  #container {
+    width: 99%;
+  }
+  #grid {
+    width:328px;
+    height:328px;
+    margin: 0 auto;
+    margin: 0 auto;
+  }
+  .navi {
+    width: 90%;
+    height:120px;
+    margin: 0 auto;
+  }
+  #info > span {
+    width: 30%;
+    font-size: 15px;
+  }
+  .box {
+    width: 82px;
+    height:82px;
+    text-align: center;
+  }
+  #button {
+    user-select: none;
+  }
+}
