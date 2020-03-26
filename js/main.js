@@ -4,7 +4,7 @@
 
   const Elements = {
     grid: document.getElementById('grid'),
-    view: document.getElementById('view'),
+    message: document.getElementById('message'),
     time: document.getElementById('time'),
     score: document.getElementById('score'),
     missCount: document.getElementById('miss'),
@@ -24,11 +24,12 @@
   }
 
 
-  class Handler {
+  class BoxHandler {
+    // Box elements handling class
     constructor () {
       this.size = 16;
       this.grid_status = this.makeStatus();
-      this.boxies = this.makeBoxies();
+      this.boxies = this.makeBoxes();
     }
 
     makeStatus() {
@@ -43,7 +44,7 @@
       return status
     }
 
-    makeBoxies() {
+    makeBoxes() {
       for (let i = 0; i < this.size; i++) {
         const box = document.createElement('div');
         box.setAttribute('class', 'box');
@@ -59,20 +60,20 @@
       return Math.floor(Math.random() * 297) + 3;
     }
 
-    makeColorNum() {
+    setColorNum() {
       return Math.floor(Math.random()* 144) + 96;
     }
 
     setColor() {
-      return `background:rgb(${this.makeColorNum()},\
-                              ${this.makeColorNum()},\
-                              ${this.makeColorNum()});`;
+      return `background:rgb(${this.setColorNum()},\
+                              ${this.setColorNum()},\
+                              ${this.setColorNum()});`;
     }
 
     setClearColor() {
       return ' background:rgba(255,255,255,0.3);\
                 color:rgba(255,225,225,0.3);\
-                border: solid 1px rgba(255,225,225,0.3);';
+                border: solid 1px rgba(255,255,255,0.3);';
     }
 
     changeBox() {
@@ -83,11 +84,7 @@
         }
       }
     }
-
-    makeScoreText(point) {
-        return point >= 0 ? (" 0000" + point ).slice(-4): "-" + ("0000" + Math.abs(point)).slice(-4);
-    }
-  } //class end
+  }
 
 
   window.onload = () => {
@@ -96,27 +93,33 @@
       let num = `0${i}`.slice(-2)
       bgImage.push(`img/re_${num}.jpg`)
     }
-    let bgimg = bgImage[
+    const bgimg = bgImage[
       Math.floor(Math.random() * bgImage.length)
     ];
     Elements.grid.style = `background-image: url(${bgimg})`;
   }
 
 
-  let handler = new Handler();
+  const handler = new BoxHandler();
 
 
   function makeLag() {
-    Elements.view.style = "display:none;";
+    Elements.message.style = "display:none;";
     if (Status.end === true) {
       Status.flag = false;
     }
   }
 
   function showGrid(text) {
-    Elements.view.textContent = text;
-    Elements.view.style = "display:block;";
+    Elements.message.textContent = text;
+    Elements.message.style = "display:block;";
     setTimeout(makeLag, 1500);
+  }
+
+
+  function makeScoreText(point) {
+    return point >= 0 ? (" 0000" + point ).slice(-4):
+                        "-" + ("0000" + Math.abs(point)).slice(-4);
   }
 
 
@@ -155,7 +158,7 @@
   }
 
 
-  function clearButtonPused(target) {
+  function clearButtonPushed(target) {
     for (elem of handler.grid_status) {
       if (elem.rock === true && elem.clear === false && Status.flag === true) {
         elem.clear = true;
@@ -170,7 +173,7 @@
             showGrid("ALL CLEAR");
             setTimeout(toggleButton, 1000);
           }
-          Elements.score.textContent =　`Score: ${handler.makeScoreText(Status.point)}`;
+          Elements.score.textContent =　`Score: ${makeScoreText(Status.point)}`;
         }
       }
     }
@@ -185,7 +188,7 @@
         let misscount = `00${Status.miss}`.slice(-2);
         Elements.missCount.textContent = `Miss: ${misscount}`;
         Status.point -=  get;
-        Elements.score.textContent = `Score: ${handler.makeScoreText(Status.point)}`;
+        Elements.score.textContent = `Score: ${makeScoreText(Status.point)}`;
       }
       if (handler.grid_status[num].rock === false && get % 3 === 0) {
         handler.grid_status[num].rock = true;
@@ -209,7 +212,7 @@
       timerRoop();
     }
     else {
-      clearButtonPused();
+      clearButtonPushed();
     }
   });
 

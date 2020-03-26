@@ -7,10 +7,12 @@ body {
   text-align: center;
   user-select: none;
 }
+
 #container {
   width: 420px;
   margin: 0 auto;
 }
+
 #grid {
   width: 420px;
   height: 420px;
@@ -22,15 +24,18 @@ body {
   background-size: 420px 420px;
   background-position: center;
 }
+
 #info {
   margin: 3% 0;
 }
+
 #info > span {
   width: 135px;
   font-size: 21px;
   display: inline-block;
 }
-#view {
+
+#message {
   width: 99%;
   z-index: 3;
   position: absolute;
@@ -54,6 +59,7 @@ body {
   overflow-y: scroll;
   user-select: none;
 }
+
 .box {
   width:105px;
   height: 105px;
@@ -105,32 +111,37 @@ body {
   margin-bottom: 12px;
   box-shadow: 0px 0px #333;
   opacity: 0.6;
-  }
+}
 
 @media (max-width: 1026px) {
   #container {
     width: 99%;
   }
+
   #grid {
     width:328px;
     height:328px;
     margin: 0 auto;
     margin: 0 auto;
   }
+
   .navi {
     width: 90%;
     height:120px;
     margin: 0 auto;
   }
+
   #info > span {
     width: 30%;
     font-size: 15px;
   }
+
   .box {
     width: 82px;
     height:82px;
     text-align: center;
   }
+  
   #button {
     user-select: none;
   }
