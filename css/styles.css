@@ -1,22 +1,20 @@
 @charset "UTF-8";
 
 body {
-  background: #f99;
-  color:#ffa;
+  background: rgb(255, 202, 191);
+  color: rgb(255, 255, 128);
   font-weight: bold;
   text-align: center;
   user-select: none;
 }
-
 #container {
   width: 420px;
   margin: 0 auto;
 }
-
 #grid {
   width: 420px;
   height: 420px;
-  border: 6px solid #ff9;
+  border: 6px solid rgb(255, 255, 128);
   border-radius: 3%;
   display: flex;
   flex-wrap: wrap;
@@ -24,17 +22,15 @@ body {
   background-size: 420px 420px;
   background-position: center;
 }
-
 #info {
   margin: 3% 0;
+  color: #333;
 }
-
 #info > span {
   width: 135px;
   font-size: 21px;
   display: inline-block;
 }
-
 #message {
   width: 99%;
   z-index: 3;
@@ -45,7 +41,7 @@ body {
   font-weight: bold;
   text-align: center;
   line-height: 0;
-  color: #ff9;
+  color: rgb(255, 255, 128);
   display: none;
 }
 
@@ -54,16 +50,15 @@ body {
   width: 420px;
   height: 99px;
   background: #fff;
-  color: #33c;
+  color: #333;
   text-align: left;
   overflow-y: scroll;
   user-select: none;
 }
-
 .box {
   width:105px;
   height: 105px;
-  border: dashed 1px #f99;
+  border: dashed 1px rgb(255, 255, 128);
   box-sizing: border-box;
   color: #fff;
   font-size: 36px;
@@ -89,21 +84,19 @@ body {
   border-radius: 24px;
   cursor: pointer;
   user-select: none;
+  box-shadow: 0 3px #333;
 }
 
 #button.start {
-  background: #fc3;
-  box-shadow: 0 3px #963;
+  background: rgb(246, 170, 0);
 }
 
 #button.clear {
-  background: #6f6;
-  box-shadow: 0 3px #390;
+  background: rgb(3, 175, 122);
 }
 
 #button.replay {
-  background:#99f;
-  box-shadow: 0 3px #369;
+  background: rgb(77, 196, 255);
 }
 
 #button.push {
@@ -111,37 +104,32 @@ body {
   margin-bottom: 12px;
   box-shadow: 0px 0px #333;
   opacity: 0.6;
-}
+  }
 
 @media (max-width: 1026px) {
   #container {
     width: 99%;
   }
-
   #grid {
     width:328px;
     height:328px;
     margin: 0 auto;
     margin: 0 auto;
   }
-
   .navi {
     width: 90%;
     height:120px;
     margin: 0 auto;
   }
-
   #info > span {
     width: 30%;
     font-size: 15px;
   }
-
   .box {
     width: 82px;
     height:82px;
     text-align: center;
   }
-  
   #button {
     user-select: none;
   }

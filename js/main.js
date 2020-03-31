@@ -23,6 +23,12 @@
     miss: 0,
   }
 
+  const Colors = {
+    orange: "rgb(246, 170, 0)",
+    green: "rgb(3, 175, 122)",
+    skyblue: "rgb(77, 196, 255)",
+    brown: "rgb(128, 64, 0)"
+  }
 
   class BoxHandler {
     // Box elements handling class
@@ -61,13 +67,18 @@
     }
 
     setColorNum() {
-      return Math.floor(Math.random()* 144) + 96;
+      const colors = ["orange", "green", "skyblue", "brown"]
+      return colors[Math.floor(Math.random()* 4)];
     }
 
     setColor() {
-      return `background:rgb(${this.setColorNum()},\
-                              ${this.setColorNum()},\
-                              ${this.setColorNum()});`;
+      let font;
+      let bg;
+      do  {
+       font = this.setColorNum();
+       bg = this.setColorNum();
+      } while(font === bg);
+      return `color:${Colors[font]};background:${Colors[bg]};`;
     }
 
     setClearColor() {
