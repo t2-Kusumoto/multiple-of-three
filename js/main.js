@@ -23,12 +23,14 @@
     miss: 0,
   }
 
+  
   const Colors = {
     orange: "rgb(246, 170, 0)",
     green: "rgb(3, 175, 122)",
     skyblue: "rgb(77, 196, 255)",
     brown: "rgb(128, 64, 0)"
   }
+
 
   class BoxHandler {
     // Box elements handling class
@@ -121,6 +123,7 @@
     }
   }
 
+  
   function showGrid(text) {
     Elements.message.textContent = text;
     Elements.message.style = "display:block;";
