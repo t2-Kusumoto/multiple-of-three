@@ -3,6 +3,7 @@
 ---  
 
 ## Games for killing time
+[You can kill time here](https://multiple-of-3.azurewebsites.net/)
 
 ### Discription and Usage
 
@@ -18,5 +19,3 @@ If the number displayed on the panel that changes at regular intervals is a mult
 Replace the background image with your favorite one :heart:  
 
 ![sample image](sample.png)
-
-[You can kill time here](https://multiple-of-3.azurewebsites.net/)
