@@ -23,7 +23,7 @@
     miss: 0,
   }
 
-  
+
   const Colors = {
     orange: "rgb(246, 170, 0)",
     green: "rgb(3, 175, 122)",
@@ -123,7 +123,7 @@
     }
   }
 
-  
+
   function showGrid(text) {
     Elements.message.textContent = text;
     Elements.message.style = "display:block;";
@@ -167,7 +167,7 @@
   }
 
 
-  function timerRoop() {
+  function timerLoop() {
     Status.timer = setInterval(manageTime, 1200);
   }
 
@@ -223,7 +223,7 @@
       Status.flag = true;
       showGrid("Start!");
       setTimeout(toggleButton, 1200);
-      timerRoop();
+      timerLoop();
     }
     else {
       clearButtonPushed();
