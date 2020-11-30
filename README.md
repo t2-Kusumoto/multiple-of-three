@@ -3,7 +3,7 @@
 ---  
 
 ## Games for killing time
-[You can kill time here](https://multiple-of-3.azurewebsites.net/)
+[You can kill time here](https://sakurann-oyaji.info/)
 
 ### Discription and Usage
 
